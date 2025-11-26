@@ -4,7 +4,7 @@ import {ReactNode} from "react";
 const Layout: React.FC<{ children: ReactNode }> = ({children}) => {
 
     return (
-        <main className="min-h-screen flex text-gray-400">
+        <main className="min-h-screen text-gray-400">
             <Header />
             <div className="contain py-10">
                 {children}
