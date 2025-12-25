@@ -4,7 +4,6 @@ import React, { useMemo, useState } from 'react';
 import AuthInput from './AuthInput';
 import AuthSelect from './AuthSelect';
 import Link from 'next/link';
-import Image from 'next/image';
 import { INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS } from '@/lib/constants';
 import { openSans } from "@/lib/fonts";
 
@@ -27,16 +26,6 @@ const initialData: SignUpFormData = {
   riskTolerance: '',
   preferredIndustry: '',
 };
-
-const COUNTRIES = [
-    { value: '', label: 'Select your country' },
-    { value: 'US', label: 'United States' },
-    { value: 'CA', label: 'Canada' },
-    { value: 'MX', label: 'Mexico' },
-    { value: 'GB', label: 'United Kingdom' },
-    { value: 'DE', label: 'Germany' },
-    { value: 'IN', label: 'India' },
-];
 
 
 const SignUpForm: React.FC = () => {
@@ -125,15 +114,15 @@ const SignUpForm: React.FC = () => {
           error={errors.email}
         />
 
-        <AuthSelect
-          name="country"
-          label="Country"
-          options={COUNTRIES}
-          value={data.country}
-          onValueChange={onChange}
-          error={errors.country}
-          helper="Helps us show market data and news relevant to you."
-        />
+        {/*<AuthSelect*/}
+        {/*  name="country"*/}
+        {/*  label="Country"*/}
+        {/*  options={COUNTRIES}*/}
+        {/*  value={data.country}*/}
+        {/*  onValueChange={onChange}*/}
+        {/*  error={errors.country}*/}
+        {/*  helper="Helps us show market data and news relevant to you."*/}
+        {/*/>*/}
 
         <AuthInput
           name="password"

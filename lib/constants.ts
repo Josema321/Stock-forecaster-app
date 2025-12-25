@@ -167,4 +167,25 @@ export const MARKET_DATA_WIDGET_CONFIG = Object.freeze({
     ],
 });
 
+// SIGN-UP FORM DROP-DOWN OPTIONS
+export const INVESTMENT_GOALS: SelectOption[] = [
+    { value: 'growth', label: 'Growth' },
+    { value: 'income', label: 'Income' },
+    { value: 'balanced', label: 'Balanced' },
+    { value: 'conservative', label: 'Conservative' },
+];
+
+export const RISK_TOLERANCE_OPTIONS: SelectOption[] = [
+    { value: 'low', label: 'Low' },
+    { value: 'medium', label: 'Medium' },
+    { value: 'high', label: 'High' },
+];
+
+export const PREFERRED_INDUSTRIES: SelectOption[] = [
+    { value: 'technology', label: 'Technology' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'finance', label: 'Finance' },
+    { value: 'energy', label: 'Energy' },
+    { value: 'consumer_goods', label: 'Consumer Goods' },
+];
 

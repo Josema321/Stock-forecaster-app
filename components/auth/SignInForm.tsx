@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import AuthInput from './AuthInput';
 import Link from 'next/link';
+import {openSans} from "@/lib/fonts";
 
 interface SignInFormData {
   email: string;
@@ -61,13 +62,11 @@ const SignInForm: React.FC = () => {
   return (
     <div>
       <div className="brand-row">
-        <div className="brand-mark" aria-hidden>
-          <span className="brand-dot" />
-        </div>
-
-        <span className="brand-text">
-            Aeris
-        </span>
+          <div className="mb-1 w-full flex justify-start">
+              <Link href="/" className={`${openSans.className} text-left leading-none text-white font-semibold tracking-wide`}>
+                  Aeris Forecast
+              </Link>
+          </div>
       </div>
 
       <h1 className="auth-title">Log In Your Account</h1>
