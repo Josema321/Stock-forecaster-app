@@ -8,19 +8,20 @@ import UserDropdown from "@/components/UserDropdown";
 
 const Header: React.FC = () => {
 
-    console.log("Header rendered ✅");
-
     return (
         <header className="sticky top-0 header">
-            <div className="container header-wrapper">
-                <Link href="/public">
-                    <Image
-                        src="/assets/images/logo.png"
-                        alt="Aeris logo"
-                        width={1080}
-                        height={720}
-                        className="h-8 w-auto cursor-pointer"
-                    />
+            <div className="container header-wrapper flex h-16 items-center justify-between">
+                <Link href="/" className="flex items-center" >
+                    <span className="relative h-32 w-[200px]">
+                        <Image
+                            src="/assets/images/logo.png"
+                            alt="Aeris logo"
+                            fill
+                            priority
+                            sizes="220px"
+                            className="object-contain"
+                        />
+                    </span>
                 </Link>
                 <nav className="hidden sm:block">
                     <NavItems />
