@@ -5,14 +5,14 @@ import { useRouter } from "next/navigation";
 import { LogOut } from "lucide-react";
 import NavItems from "@/components/NavItems";
 
-const UserDropdown = () => {
+const UserDropdown = ({ initialStocks }: {initialStocks: StockWithWatchlistStatus[]}) => {
     const router = useRouter();
 
     const handleSignOut = async () => {
         router.push("/sign-in");
     };
 
-    const user = { name: "John", email: "testjohn@gmail.com" };
+    const user = { name: "Jose", email: "testjose@gmail.com" };
 
     return (
         <div className="dropdown dropdown-end">
@@ -84,7 +84,7 @@ const UserDropdown = () => {
 
                 {/* Mobile-only NavItems */}
                 <li className="sm:hidden">
-                    <NavItems />
+                    <NavItems initialStocks={initialStocks} />
                 </li>
             </ul>
         </div>
