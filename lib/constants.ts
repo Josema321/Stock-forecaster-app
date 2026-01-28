@@ -2,7 +2,7 @@
 export const NAV_ITEMS: {href: string; label: string }[] = [
     { href: '/', label: 'Home' },
     { href: '/search', label: 'Search' },
-    { href: '/watchlist', label: 'Watchlist' },
+    // { href: '/watchlist', label: 'Watchlist' },
 ]
 
 // TradingView Widget CONFIG
@@ -193,7 +193,6 @@ export const PREFERRED_INDUSTRIES: SelectOption[] = [
 export const SYMBOL_INFO_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: true,
     locale: 'en',
     width: '100%',
     height: 170,
@@ -254,7 +253,6 @@ export const BASELINE_WIDGET_CONFIG = (symbol: string) => ({
 export const TECHNICAL_ANALYSIS_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: 'true',
     locale: 'en',
     width: '100%',
     height: 400,
@@ -265,7 +263,6 @@ export const TECHNICAL_ANALYSIS_WIDGET_CONFIG = (symbol: string) => ({
 export const COMPANY_PROFILE_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: 'true',
     locale: 'en',
     width: '100%',
     height: 440,
@@ -274,7 +271,6 @@ export const COMPANY_PROFILE_WIDGET_CONFIG = (symbol: string) => ({
 export const COMPANY_FINANCIALS_WIDGET_CONFIG = (symbol: string) => ({
     symbol: symbol.toUpperCase(),
     colorTheme: 'dark',
-    isTransparent: 'true',
     locale: 'en',
     width: '100%',
     height: 464,

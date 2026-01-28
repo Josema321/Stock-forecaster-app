@@ -67,4 +67,10 @@ declare global {
     type StockWithWatchlistStatus = Stock & {
         isInWatchlist: boolean;
     };
+
+    type StockDetailsPageProps = {
+        params: Promise<{
+            symbol: string;
+        }>;
+    };
 }
