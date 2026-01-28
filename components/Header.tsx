@@ -1,12 +1,14 @@
-import React, {ReactNode} from 'react'
+import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
 
 import NavItems from "@/components/NavItems";
 import UserDropdown from "@/components/UserDropdown";
+import { searchStocks } from "@/lib/finhub/finnhub.actions";
 
 
-const Header: React.FC = () => {
+const Header = async ()  => {
+    const initialStocks = await searchStocks();
 
     return (
         <header className="sticky top-0 header">
@@ -24,9 +26,10 @@ const Header: React.FC = () => {
                     </span>
                 </Link>
                 <nav className="hidden sm:block">
-                    <NavItems />
+                    <NavItems initialStocks={initialStocks} />
                 </nav>
-                <UserDropdown />
+
+                <UserDropdown initialStocks={initialStocks}  />
 
 
             </div>
